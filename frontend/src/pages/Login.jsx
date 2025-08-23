@@ -345,13 +345,7 @@ const Login = ({ onLogin }) => {
               </button>
             </div>
             
-            {isLoginMode && (
-              <div className="mt-4 text-center text-sm text-secondary-500">
-                <p className="mb-2">Demo Account (for testing):</p>
-                <p>Email: demo@clientcore.com</p>
-                <p>Password: demo123</p>
-              </div>
-            )}
+            {isLoginMode}
           </div>
         </div>
 
