@@ -357,40 +357,40 @@ const Clients = () => {
       {/* Create Client Modal */}
       {showCreateModal && (
         <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
-          <div className="bg-white rounded-lg p-4 w-full max-w-md mx-4">
-            <div className="flex items-center justify-between mb-3">
-              <h3 className="text-base font-semibold text-secondary-900">Add New Client</h3>
+          <div className="bg-white rounded-lg p-3 w-full max-w-sm mx-4">
+            <div className="flex items-center justify-between mb-2">
+              <h3 className="text-sm font-semibold text-secondary-900">Add New Client</h3>
               <button
                 onClick={() => setShowCreateModal(false)}
-                className="text-red-500 hover:text-red-700 bg-red-50 hover:bg-red-100 p-1 rounded-full transition-colors"
+                className="text-red-500 hover:text-red-700 bg-red-50 hover:bg-red-100 p-0.5 rounded-full transition-colors"
               >
-                <X className="w-5 h-5" />
+                <X className="w-4 h-4" />
               </button>
             </div>
             
-            <div className="space-y-2">
-              <div className="grid grid-cols-2 gap-2">
+            <div className="space-y-1">
+              <div className="grid grid-cols-2 gap-1">
                 <div>
-                  <label className="block text-xs font-medium text-secondary-700 mb-1">
+                  <label className="block text-xs font-medium text-secondary-700 mb-0.5">
                     Company Name *
                   </label>
                   <input
                     type="text"
                     value={newClient.name}
                     onChange={(e) => handleInputChange('name', e.target.value)}
-                    className="input-field py-1.5"
+                    className="input-field py-1 text-xs"
                     placeholder="Company name"
                   />
                 </div>
                 
                 <div>
-                  <label className="block text-xs font-medium text-secondary-700 mb-1">
+                  <label className="block text-xs font-medium text-secondary-700 mb-0.5">
                     Type
                   </label>
                   <select
                     value={newClient.type}
                     onChange={(e) => handleInputChange('type', e.target.value)}
-                    className="input-field py-1.5"
+                    className="input-field py-1 text-xs"
                   >
                     <option value="Client">Client</option>
                     <option value="Supplier">Supplier</option>
@@ -398,87 +398,87 @@ const Clients = () => {
                 </div>
               </div>
               
-              <div className="grid grid-cols-2 gap-2">
+              <div className="grid grid-cols-2 gap-1">
                 <div>
-                  <label className="block text-xs font-medium text-secondary-700 mb-1">
+                  <label className="block text-xs font-medium text-secondary-700 mb-0.5">
                     Contact Person *
                   </label>
                   <input
                     type="text"
                     value={newClient.contactPerson}
                     onChange={(e) => handleInputChange('contactPerson', e.target.value)}
-                    className="input-field py-1.5"
+                    className="input-field py-1 text-xs"
                     placeholder="Contact person"
                   />
                 </div>
                 
                 <div>
-                  <label className="block text-xs font-medium text-secondary-700 mb-1">
+                  <label className="block text-xs font-medium text-secondary-700 mb-0.5">
                     Email *
                   </label>
                   <input
                     type="email"
                     value={newClient.email}
                     onChange={(e) => handleInputChange('email', e.target.value)}
-                    className="input-field py-1.5"
+                    className="input-field py-1 text-xs"
                     placeholder="Email address"
                   />
                 </div>
               </div>
               
-              <div className="grid grid-cols-2 gap-2">
+              <div className="grid grid-cols-2 gap-1">
                 <div>
-                  <label className="block text-xs font-medium text-secondary-700 mb-1">
+                  <label className="block text-xs font-medium text-secondary-700 mb-0.5">
                     Phone
                   </label>
                   <input
                     type="tel"
                     value={newClient.phone}
                     onChange={(e) => handleInputChange('phone', e.target.value)}
-                    className="input-field py-1.5"
+                    className="input-field py-1 text-xs"
                     placeholder="Phone number"
                   />
                 </div>
                 
                 <div>
-                  <label className="block text-xs font-medium text-secondary-700 mb-1">
+                  <label className="block text-xs font-medium text-secondary-700 mb-0.5">
                     Industry
                   </label>
                   <input
                     type="text"
                     value={newClient.industry}
                     onChange={(e) => handleInputChange('industry', e.target.value)}
-                    className="input-field py-1.5"
+                    className="input-field py-1 text-xs"
                     placeholder="Industry"
                   />
                 </div>
               </div>
               
               <div>
-                <label className="block text-xs font-medium text-secondary-700 mb-1">
+                <label className="block text-xs font-medium text-secondary-700 mb-0.5">
                   Address
                 </label>
                 <input
                   type="text"
                   value={newClient.address}
                   onChange={(e) => handleInputChange('address', e.target.value)}
-                  className="input-field py-1.5"
+                  className="input-field py-1 text-xs"
                   placeholder="Enter address"
                 />
               </div>
               
-              <div className="grid grid-cols-2 gap-2">
+              <div className="grid grid-cols-2 gap-1">
                 <div>
-                  <label className="block text-xs font-medium text-secondary-700 mb-1">
+                  <label className="block text-xs font-medium text-secondary-700 mb-0.5">
                     Total Revenue
                   </label>
                   <div className="relative">
-                    <span className="absolute left-3 top-1/2 transform -translate-y-1/2 text-secondary-500">$</span>
+                    <span className="absolute left-2 top-1/2 transform -translate-y-1/2 text-secondary-500 text-xs">$</span>
                     <input
                       type="number"
                       value={newClient.totalRevenue || ''}
                       onChange={(e) => handleInputChange('totalRevenue', parseFloat(e.target.value) || 0)}
-                      className="input-field pl-8 py-1.5"
+                      className="input-field pl-6 py-1 text-xs"
                       placeholder="0.00"
                       min="0"
                       step="0.01"
@@ -487,13 +487,13 @@ const Clients = () => {
                 </div>
                 
                 <div>
-                  <label className="block text-xs font-medium text-secondary-700 mb-1">
+                  <label className="block text-xs font-medium text-secondary-700 mb-0.5">
                     Status
                   </label>
                   <select
                     value={newClient.status}
                     onChange={(e) => handleInputChange('status', e.target.value)}
-                    className="input-field py-1.5"
+                    className="input-field py-1 text-xs"
                   >
                     <option value="Active">Active</option>
                     <option value="Inactive">Inactive</option>
@@ -503,16 +503,16 @@ const Clients = () => {
               </div>
             </div>
             
-            <div className="flex space-x-2 mt-3">
+            <div className="flex space-x-1 mt-2">
               <button
                 onClick={handleCreateClient}
-                className="btn-primary flex-1 py-1.5"
+                className="btn-primary flex-1 py-1 text-xs"
               >
                 Add ClientCore Client
               </button>
               <button
                 onClick={() => setShowCreateModal(false)}
-                className="btn-secondary flex-1 py-1.5"
+                className="btn-secondary flex-1 py-1 text-xs"
               >
                 Cancel
               </button>
