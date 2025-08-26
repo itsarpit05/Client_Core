@@ -357,14 +357,14 @@ const Clients = () => {
       {/* Create Client Modal */}
       {showCreateModal && (
         <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
-          <div className="bg-white rounded-lg p-3 w-full max-w-sm mx-4">
+          <div className="bg-white rounded-lg p-3 w-full max-w-lg mx-4">
             <div className="flex items-center justify-between mb-2">
-              <h3 className="text-base font-semibold text-secondary-900">Add New Client</h3>
+              <h3 className="text-lg font-semibold text-secondary-900">Add New Client</h3>
               <button
                 onClick={() => setShowCreateModal(false)}
                 className="text-secondary-400 hover:text-secondary-600"
               >
-                <X className="w-4 h-4" />
+                <X className="w-5 h-5" />
               </button>
             </div>
             
@@ -372,7 +372,7 @@ const Clients = () => {
               <div className="grid grid-cols-2 gap-2">
                 <div>
                   <label className="block text-xs font-medium text-secondary-700 mb-0.5">
-                    Company Name
+                    Company Name *
                   </label>
                   <input
                     type="text"
@@ -401,7 +401,7 @@ const Clients = () => {
               <div className="grid grid-cols-2 gap-2">
                 <div>
                   <label className="block text-xs font-medium text-secondary-700 mb-0.5">
-                    Contact Person
+                    Contact Person *
                   </label>
                   <input
                     type="text"
@@ -414,7 +414,7 @@ const Clients = () => {
                 
                 <div>
                   <label className="block text-xs font-medium text-secondary-700 mb-0.5">
-                    Email
+                    Email *
                   </label>
                   <input
                     type="email"
@@ -458,12 +458,12 @@ const Clients = () => {
                 <label className="block text-xs font-medium text-secondary-700 mb-0.5">
                   Address
                 </label>
-                <textarea
+                <input
+                  type="text"
                   value={newClient.address}
                   onChange={(e) => handleInputChange('address', e.target.value)}
                   className="input-field py-2"
                   placeholder="Enter address"
-                  rows="1"
                 />
               </div>
               
