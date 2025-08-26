@@ -15,11 +15,12 @@
     "test": "echo \"No tests specified\" && exit 0"
   },
   "dependencies": {
+    "clsx": "^1.2.1",
+    "lucide-react": "^0.263.1",
+    "mongoose": "^8.18.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-router-dom": "^6.8.1",
-    "lucide-react": "^0.263.1",
-    "clsx": "^1.2.1",
     "tailwind-merge": "^1.14.0"
   },
   "devDependencies": {
@@ -27,6 +28,7 @@
     "@types/react-dom": "^18.2.7",
     "@vitejs/plugin-react": "^4.0.3",
     "autoprefixer": "^10.4.14",
+    "concurrently": "^8.2.2",
     "eslint": "^8.45.0",
     "eslint-plugin-react": "^7.32.2",
     "eslint-plugin-react-hooks": "^4.6.0",
@@ -34,10 +36,16 @@
     "postcss": "^8.4.27",
     "tailwindcss": "^3.3.3",
     "typescript": "^5.0.2",
-    "vite": "^4.4.5",
-    "concurrently": "^8.2.2"
+    "vite": "^4.4.5"
   },
-  "keywords": ["crm", "react", "nodejs", "mongodb", "express", "business"],
+  "keywords": [
+    "crm",
+    "react",
+    "nodejs",
+    "mongodb",
+    "express",
+    "business"
+  ],
   "author": "ClientCore Team",
   "license": "MIT",
   "repository": {
